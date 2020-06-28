@@ -5,15 +5,20 @@
       <br />
     </p>
 
-    <p>学生：2017214228,123456</p>
+    <p>已选择学生：2017214228,123456</p>
+    <br />
+    <p>未选择学生：2017214186,2017214186</p>
     <br />
     <form ref="form">
-      学号/工号：<input v-model="num" type="text" />
+      学号/工号：
+      <input type="text" v-model="num" />
       <br />
-      密码：<input v-model="password" type="password" />
+      密码：
+      <input type="password" v-model="password" />
       <br />
-      <p>{{ isLogin }}</p>
       <button @click="login" type="button">登录</button>
+      <br />
+      <router-link to="resetPassword">忘记密码</router-link>
     </form>
   </div>
 </template>

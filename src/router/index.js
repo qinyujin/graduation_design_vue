@@ -11,9 +11,9 @@ const routes = [
     component: index
   },
   {
-    path: "/teacher",
-    name: "teacherHome",
-    component: () => import("@/views/teacherHomePage.vue")
+    path: "/resetPassword",
+    name: "resetPassword",
+    component: () => import("@/views/resetPassword")
   }
 ];
 

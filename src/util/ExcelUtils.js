@@ -7,11 +7,11 @@ export function readStudentFile(file) {
     let reader = new FileReader();
     reader.readAsBinaryString(file);
     reader.onload = event => {
-      console.log("b");
       let data = event.target.result;
       let workbook = xlsx.read(data, { type: "binary" });
       let sheet = workbook.Sheets[workbook.SheetNames[0]];
       xlsx.utils.sheet_to_row_object_array(sheet).forEach(r => {
+        console.log(r);
         if (!isNaN(r.__EMPTY)) {
           let stu = {
             number: r.__EMPTY,

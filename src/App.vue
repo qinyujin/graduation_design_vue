@@ -1,11 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <header id="title">导师双选系统</header>
+      <alertDialog></alertDialog>
+      <header id="title">
+        导师双选系统(本系统专供王波老师使用，如果想选其他导师请另行联系)
+      </header>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  components: {
+    alertDialog: () => import("@/components/AlertDialog")
+  }
+};
+</script>
 
 <style>
 #app {
